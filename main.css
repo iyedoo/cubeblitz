@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background:#007BFF;
+  width: 100%;
+  min-height: 100vh;
+}
+
+header {
+  background: #007BFF;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30%;
+}
+
+header nav .logo {
+  height: 70px;
+}
+
+header nav a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+header nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #FFDD00;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+header nav a:hover {
+  transform: translateY(-2px);
+  color: #FFDD00;
+}
+
+header nav a:hover::before {
+  transform: scaleX(1);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  background-image: url(images/background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  clip-path: ellipse(100% 94% at 50% 5%);
+  padding: 20px;
+  width: 100%;
+}
+
+.cube-container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+h1 {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 40px;
+  color: #007BFF;
+  margin-bottom: 30px;
+}
+
+.tagline {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.word-carousel {
+  height: 50px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.word-slide {
+  animation: slide 12s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+
+.word-slide div {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #FFDD00;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes slide {
+  0%, 22% { transform: translateY(0); }
+  25%, 47% { transform: translateY(-50px); }
+  50%, 72% { transform: translateY(-100px); }
+  75%, 97% { transform: translateY(-150px); }
+  100% { transform: translateY(-200px); }
+}
+
+.btn-race {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-race:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: all 0.5s;
+}
+
+.btn-race:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.btn-race:hover:before {
+  left: 100%;
+}
+
+.features {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.features h2 {
+  font-family: 'Roboto Slab', cursive;
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.feature-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card i {
+  font-size: 48px;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.feature-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.feature-link:hover {
+  background-color: #0056b3;
+}
+
+.youtube-channels {
+  background-color: #f0f0f0;
+  padding: 50px 20px;
+  text-align: center;
+  clip-path: ellipse(99% 68% at 50% 70%);
+}
+
+.youtube-channels h2 {
+  font-family: "Roboto Slab";
+  font-size: 36px;
+  color: #007BFF;
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.wrapper .carousel {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
+
+.carousel .card {
+  flex: 0 0 300px;
+  height: 400px; /* Increased height */
+  margin-right: 20px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  list-style: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.carousel .card:hover {
+  transform: translateY(-5px);
+}
+
+.logo-container {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.channel-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.channel-name {
+  font-family: "Poppins";
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.subscriber-count {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.channel-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.channel-link:hover {
+  background-color: #0056b3;
+}
+
+.wrapper .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+  width: 50px;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.wrapper .arrow:hover {
+  background-color: #0056b3;
+}
+
+.wrapper .left {
+  left: -10%;
+}
+
+.wrapper .right {
+  right: -10%;
+}
