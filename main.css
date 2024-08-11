@@ -270,7 +270,7 @@ h1 {
   margin-right: 20px;
   background: white;
   border-radius: 8px;
-  padding: 20px;
+  padding: 20px 5px;
   list-style: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -310,6 +310,10 @@ h1 {
   margin-bottom: 15px;
 }
 
+.description {
+  font-size: 16px;
+}
+
 .channel-link {
   display: inline-block;
   padding: 10px 20px;
@@ -317,6 +321,7 @@ h1 {
   color: white;
   text-decoration: none;
   border-radius: 25px;
+  margin: 0 10px;
   transition: background-color 0.3s ease;
 }
 
@@ -351,4 +356,110 @@ h1 {
 
 .wrapper .right {
   right: -10%;
+}
+
+.tutorials-section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.tutorials-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.tutorials-section h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 36px;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.tutorial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.tutorial-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tutorial-card i {
+  font-size: 48px;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+.tutorial-card h3 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.tutorial-card p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn-tutorial {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-tutorial:hover {
+  background-color: #0056b3;
+}
+
+.btn-all-tutorials {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-all-tutorials:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .tutorial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tutorial-card {
+    width: 100%;
+    max-width: 300px;
+  }
 }
