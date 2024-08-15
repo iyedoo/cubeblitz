@@ -40,6 +40,13 @@ header nav a {
   text-decoration: none;
   position: relative;
   transition: transform 0.3s ease;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+header nav a .fas {
+  display: none;
 }
 
 header nav a::before {
@@ -84,8 +91,7 @@ main {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 30px;
   text-align: center;
-  width: 100%;
-  max-width: 800px;
+  width: 40%;
 }
 
 h1 {
@@ -453,6 +459,36 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  header nav {
+    gap: 15%;
+  }
+
+  header nav .logo {
+    height: 50px;
+  }
+  
+  header nav a span {
+    display: none;
+  }
+  
+  header nav a .fas {
+    display: block;
+  }
+  
+  header nav a::before {
+    display: none;
+  }
+
+  .cube-container {
+    width: 90%;
+    margin-top: -50px;
+  }
+  
+  .youtube-channels h2 {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
   .tutorial-cards {
     flex-direction: column;
     align-items: center;
@@ -461,5 +497,101 @@ h1 {
   .tutorial-card {
     width: 100%;
     max-width: 300px;
+  }
+}
+
+.site-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 60px 0 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 0 0 48%;  /* Changed from flex: 1 to give more precise control */
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 24px;  /* Increased from 18px */
+  margin-bottom: 20px;
+  color: #007BFF;
+}
+
+.footer-section p {
+  font-size: 16px;  /* Increased from 14px */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Contact form styles */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea {
+  margin-bottom: 15px;
+  padding: 12px;  /* Increased from 10px */
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;  /* Increased from default */
+}
+
+#contact-form textarea {
+  height: 150px;  /* Increased from 100px */
+  resize: vertical;
+}
+
+#contact-form button {
+  padding: 12px 24px;  /* Increased padding */
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;  /* Increased from default */
+  font-weight: bold;
+}
+
+#contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #555;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    flex: 0 0 100%;
+    margin-bottom: 40px;
   }
 }
