@@ -11,11 +11,11 @@
   
   <header>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Tutorials</a>
+      <a href="#"><span>Home</span><i class="fas fa-home"></i></a>
+      <a href="#"><span>Tutorials</span><i class="fas fa-clipboard-list"></i></a>
       <img src="images/logo.png" alt="logo" class="logo">
-      <a href="#">Leaderboard</a>
-      <a href="#">Profile</a>
+      <a href="#"><span>Leaderboard</span><i class="fas fa-trophy"></i></a>
+      <a href="#"><span>Profile</span><i class="fas fa-user"></i></a>
     </nav>
   </header>
 
@@ -150,6 +150,28 @@
       <a href="#" class="btn-all-tutorials">View All Tutorials</a>
     </div>
   </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>About Us</h3>
+        <p>We are passionate about cubing and dedicated to helping speed cubers improve their skills. Our platform offers a unique opportunity for cubers around the world to race against each other, compare their times, and learn new techniques.</p>
+        <p>Whether you're a beginner looking to solve your first cube or an experienced speedcuber aiming to shave milliseconds off your time, CubingRace is the community for you. Join us to challenge yourself, make friends, and become part of the global cubing family!</p>
+      </div>
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <form id="contact-form" action="#" method="POST">
+          <input type="text" name="fullname" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 CubingRace. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script src="slider.js"></script>
 
